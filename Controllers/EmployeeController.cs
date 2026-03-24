@@ -38,5 +38,13 @@ namespace DataNavigation.Controllers
             return Ok("Assigned successfully");
         }
 
+        [HttpGet("employee")]
+
+        public async Task<IActionResult> GetEmployess()
+        {
+            var response = await _employeeService.GetEmployees();
+            return Ok(response);
+        }
+
     }
 }

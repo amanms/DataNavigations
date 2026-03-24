@@ -37,5 +37,11 @@ namespace DataNavigation.Services
             await _employeeRepository.AddAsynEmployeeDepartment(assignDepartment);
 
         }
+
+        public async Task<List<GetEmployeeDto>> GetEmployees()
+        {
+            var employee = await _employeeRepository.GetEmployeesAsync();
+            return employee;
+        }
     }
 }
